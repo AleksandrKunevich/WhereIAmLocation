@@ -1,7 +1,6 @@
 package com.example.whereiamlocation
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.LocationListener
@@ -18,7 +17,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var locationManager: LocationManager
 
-    @SuppressLint("SetTextI18n")
     private val locationListener: LocationListener = LocationListener { location ->
         binding.textviewCoordinate.text = "Your location :${
             String.format(
@@ -74,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                 Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            binding.textviewCoordinate.text = "Enable GPS, please!"
+            binding.textviewCoordinate.text = getString(R.string.enableGPSplease)
             return
         }
         locationManager.requestLocationUpdates(
