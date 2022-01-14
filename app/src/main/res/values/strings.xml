@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WhereIAmLocation</string>
+    <string name="where_i_am">Where I am?</string>
+    <string name="no_coordinate">Coordinate - NO</string>
+
+    <string name="provider_gps">GPS</string>
+    <string name="provider_network">Network</string>
+    <string name="location_settings">Location settings</string>
+</resources>
